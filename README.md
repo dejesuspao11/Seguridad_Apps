@@ -1,5 +1,5 @@
 # [Paola de Jesus]
-![Mi foto](mi_foto.jpg)
+![mi_foto](mi_foto.jpg)
 
 ## Enlaces
 - [Presentación de la práctica 1](https://docs.google.com/presentation/d/1k4HpHSg7DPSYwqzzrr_LrW9L2iHRPMqwArLM6HnCFN0/edit?usp=sharing)
