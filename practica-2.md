@@ -1,7 +1,7 @@
 # Datos personales
 - Nombre: Paola de Jesus Rebollar Cruz
 - Edad: 24 años
-- Fotografía: ![mi_foto](mi_foto.jpg)
+- Fotografía: ![mi_foto](mi_foto.jpeg)
 
 ## Breve presentación
 Soy Paola, tengo 24 años, vivo en la Ciudad de México desde hace casi 6 años, me mudé para estudiar arte
