@@ -6,3 +6,5 @@
 - [Practica 2](https://github.com/dejesuspao11/Seguridad_Apps/blob/main/practica-2.md)
 - [Practica 3](https://github.com/dejesuspao11/Seguridad_Apps/blob/main/practica-3.md) 
 - [Practica 4](https://github.com/dejesuspao11/Seguridad_Apps/blob/main/docs/cv-web/index.html)
+- [Practica 5](https://github.com/dejesuspao11/Seguridad_Apps/blob/main/docs/cv-web/styles.css)
+- [Practica 6](https://github.com/dejesuspao11/Seguridad_Apps/tree/main/docs/cv-web2)
