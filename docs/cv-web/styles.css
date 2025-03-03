@@ -1,0 +1,117 @@
+/* 1. Define el tamaño de la letra */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1rem;
+}
+
+/* 2. Define la propiedad box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Define la familia de fuente */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;  /* Color de letra */
+    background-color: #abcbf1;  /* Color de fondo */
+}
+
+/* 4. Define el color de letra y fondo */
+body {
+    color: #333;  /* Color de letra */
+    background-color: #72a7b3;  /* Color de fondo */
+}
+
+/* 5. Define el color de letra para los enlaces */
+a {
+    color: #cd23eb;  /* Color de letra para los enlaces */
+}
+
+/* 6. Define el color de letra en el estado hover para los enlaces */
+a:hover {
+    color: #0056b3;  /* Color de letra cuando el enlace está en hover */
+}
+
+/* 7. Aplica max-width: 100% a las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 8. Crea 3 variables y aplícalas */
+:root {
+    --main-color: #007BFF;
+    --background-color: #f4f4f4;
+    --font-color: #333;
+}
+
+body {
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--main-color);
+}
+
+/* 9. Crea 3 selectores de identificador */
+#header {
+    background-color: #333;
+    color: white;
+}
+
+#content {
+    padding: 20px;
+}
+
+#footer {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* 10. Crea 3 selectores de clase */
+.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+/* 11. Crea 3 selectores descendientes */
+header h1 {
+    font-size: 2rem;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+/* 12. Crea 3 selectores de grupo */
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+p, ul, ol {
+    margin-bottom: 1rem;
+}
+
+button, .btn {
+    border: none;
+    cursor: pointer;
+}
