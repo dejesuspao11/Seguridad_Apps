@@ -1,117 +1,107 @@
-/* 1. Define el tamaño de la letra */
-html {
-    font-size: 100%;
-}
-
-body {
-    font-size: 1rem;
-}
-
-/* 2. Define la propiedad box-sizing */
-* {
-    box-sizing: border-box;
-}
-
-/* 3. Define la familia de fuente */
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;  /* Color de letra */
-    background-color: #abcbf1;  /* Color de fondo */
-}
-
-/* 4. Define el color de letra y fondo */
-body {
-    color: #333;  /* Color de letra */
-    background-color: #72a7b3;  /* Color de fondo */
-}
-
-/* 5. Define el color de letra para los enlaces */
-a {
-    color: #cd23eb;  /* Color de letra para los enlaces */
-}
-
-/* 6. Define el color de letra en el estado hover para los enlaces */
-a:hover {
-    color: #0056b3;  /* Color de letra cuando el enlace está en hover */
-}
-
-/* 7. Aplica max-width: 100% a las imágenes */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 8. Crea 3 variables y aplícalas */
+/* Variables de color */
 :root {
-    --main-color: #007BFF;
-    --background-color: #f4f4f4;
-    --font-color: #333;
+    --primary-bg: #f4f4f4;
+    --text-color: #333;
+    --accent-color: #007bff;
 }
 
+/* Estilos generales */
 body {
-    color: var(--font-color);
-    background-color: var(--background-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
 }
 
-a {
-    color: var(--main-color);
+header {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
-/* 9. Crea 3 selectores de identificador */
-#header {
-    background-color: #333;
+h1 {
+    margin: 0;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
     color: white;
 }
 
-#content {
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Contenedor principal */
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Por defecto 3 columnas */
+    gap: 20px;
     padding: 20px;
 }
 
-#footer {
-    text-align: center;
-    font-size: 0.8rem;
+/* Estilos de las secciones */
+.box {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* 10. Crea 3 selectores de clase */
-.btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--text-color);
     color: white;
-    border-radius: 5px;
-}
-
-.text-center {
     text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 15px;
+/* RESPONSIVE DESIGN */
+
+/* Dispositivos móviles: 1 columna */
+@media (max-width: 600px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* 11. Crea 3 selectores descendientes */
-header h1 {
-    font-size: 2rem;
+/* Tabletas: 2 columnas */
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-section p {
-    line-height: 1.6;
+/* Escritorio estándar: 3 columnas */
+@media (min-width: 901px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-footer ul li {
-    list-style-type: none;
-}
-
-/* 12. Crea 3 selectores de grupo */
-h1, h2, h3 {
-    font-weight: bold;
-}
-
-p, ul, ol {
-    margin-bottom: 1rem;
-}
-
-button, .btn {
-    border: none;
-    cursor: pointer;
+/* Pantallas grandes: 4 columnas */
+@media (min-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
