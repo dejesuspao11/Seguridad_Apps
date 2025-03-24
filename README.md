@@ -10,3 +10,4 @@
 - [Practica 6](https://github.com/dejesuspao11/Seguridad_Apps/tree/main/docs/cv-web2)
 - [Practica 7](https://github.com/dejesuspao11/Seguridad_Apps/tree/main/docs/practica-7)
 - [Practica 8](https://github.com/dejesuspao11/Seguridad_Apps/tree/main/docs/practica-8)
+- [Practica 9](https://github.com/dejesuspao11/Seguridad_Apps/tree/main/docs/practica-9)
