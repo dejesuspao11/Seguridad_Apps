@@ -119,22 +119,29 @@ document.getElementById("formularioCompra").addEventListener("submit", function(
     const confirmacion = document.getElementById("confirmacion").value;
     const mensajeError = document.getElementById("mensajeError");
 
-    if (!nombre) {
-        mensajeError.textContent = "❌ El nombre no puede estar vacío.";
+    const regexNombre = /^[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+$/;
+    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+    // Validación de nombre
+    if (!nombre || !regexNombre.test(nombre)) {
+        mensajeError.textContent = "❌ El nombre solo debe contener letras y espacios.";
         return;
     }
 
-    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Validación de correo
     if (!regexCorreo.test(correo)) {
         mensajeError.textContent = "❌ El correo no es válido.";
         return;
     }
 
-    if (password.length < 8) {
-        mensajeError.textContent = "❌ La contraseña debe tener al menos 8 caracteres.";
+    // Validación de contraseña
+    if (!regexPassword.test(password)) {
+        mensajeError.textContent = "❌ La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.";
         return;
     }
 
+    // Validación de confirmación
     if (password !== confirmacion) {
         mensajeError.textContent = "❌ Las contraseñas no coinciden.";
         return;
