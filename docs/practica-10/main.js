@@ -153,3 +153,9 @@ function procesarCompra() {
 // 📌 Inicializar la tienda
 document.getElementById("procesarCompra").addEventListener("click", procesarCompra);
 cargarProductosDesdeAPI(); // ¡Ahora todo se carga desde la API!
+
+const toggleBtn = document.getElementById("toggleModo");
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Modo Claro" : "🌙 Modo Oscuro";
+});
