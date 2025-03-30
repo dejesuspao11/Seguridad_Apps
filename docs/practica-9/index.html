@@ -4,36 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Tienda</title>
-    <link rel="icon" type="image/x-icon" href="../assets/Storefavicon.ico"> 
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .producto, .carrito-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border: 1px solid #ddd; margin: 5px auto; width: 50%; }
-        button { padding: 5px 10px; cursor: pointer; }
-        #carrito { margin-top: 20px; }
-        #procesarCompra { margin-top: 20px; padding: 10px; font-size: 16px; }
-
-        /* 🔹 Ventana modal */
-        .modal {
-            display: none;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="../assets/Storefavicon.ico">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>🛒 Tienda en Línea</h1>
@@ -46,44 +18,28 @@
 
     <button id="procesarCompra">🛍️ Comprar</button>
 
-    <!-- 🔹 Modal compra -->
-    <div id="modalProceso" class="modal">
+    <!-- 🛍️ Modal de compra en proceso -->
+    <div id="modalProceso" class="modal" style="display: none;">
         <div class="modal-content">
             <h2>Compra en proceso...</h2>
         </div>
     </div>
 
-    <h2>🔐 Registro de Usuario</h2>
-    <form id="registroForm">
-        <div>
-            <input type="text" id="nombre" placeholder="Nombre completo">
-            <p id="errorNombre" style="color: red;"></p>
-        </div>
-        <div>
-            <input type="email" id="correo" placeholder="Correo electrónico">
-            <p id="errorCorreo" style="color: red;"></p>
-        </div>
-        <div>
-            <input type="password" id="password" placeholder="Contraseña">
-            <p id="errorPassword" style="color: red;"></p>
-        </div>
-        <div>
-            <input type="password" id="confirmarPassword" placeholder="Confirmar contraseña">
-            <p id="errorConfirmacion" style="color: red;"></p>
-        </div>
-        <button type="submit">Registrarse</button>
-    </form>
-
-    <!-- 🔹 Modal loader de registro -->
-    <div id="loader" class="modal">
+    <!-- 📝 Modal del formulario -->
+    <div id="modalFormulario" class="modal" style="display: none;">
         <div class="modal-content">
-            <h2>Registrando usuario...</h2>
+            <h2>Finaliza tu compra</h2>
+            <form id="formularioCompra">
+                <input type="text" id="nombre" placeholder="Nombre completo"><br><br>
+                <input type="email" id="correo" placeholder="Correo electrónico"><br><br>
+                <input type="password" id="password" placeholder="Contraseña"><br><br>
+                <input type="password" id="confirmacion" placeholder="Confirmar contraseña"><br><br>
+                <button type="submit">Continuar</button>
+                <p id="mensajeError" style="color: red; margin-top: 10px;"></p>
+            </form>
         </div>
     </div>
 
-    <p id="mensajeExito" style="color: green;"></p>
-
-    <!-- JS debe ir al final -->
     <script src="main.js"></script>
 </body>
 </html>

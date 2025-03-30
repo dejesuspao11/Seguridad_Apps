@@ -1,4 +1,3 @@
-// 🛒 Lista de productos
 const productos = [
     { nombre: "Amatista", precio: 300, stock: 5 },
     { nombre: "Ópalo", precio: 700, stock: 10 },
@@ -13,7 +12,6 @@ const productos = [
 
 let carrito = [];
 
-// 📌 Mostrar productos
 function mostrarProductos() {
     const contenedor = document.getElementById("productos-container");
     contenedor.innerHTML = "";
@@ -30,7 +28,6 @@ function mostrarProductos() {
     });
 }
 
-// 📌 Actualizar carrito
 function actualizarCarrito() {
     const contenedorCarrito = document.getElementById("carrito");
     contenedorCarrito.innerHTML = "";
@@ -61,17 +58,18 @@ function actualizarCarrito() {
     contenedorCarrito.appendChild(totalDiv);
 }
 
-// 📌 Agregar producto
 function agregarAlCarrito(index) {
     let producto = productos[index];
 
     if (producto.stock > 0) {
         let itemCarrito = carrito.find(item => item.nombre === producto.nombre);
+        
         if (itemCarrito) {
             itemCarrito.cantidad++;
         } else {
             carrito.push({ nombre: producto.nombre, precio: producto.precio, cantidad: 1 });
         }
+
         producto.stock--;
         actualizarCarrito();
         mostrarProductos();
@@ -80,7 +78,6 @@ function agregarAlCarrito(index) {
     }
 }
 
-// 📌 Quitar producto
 function quitarDelCarrito(index) {
     let producto = productos[index];
     let itemCarrito = carrito.find(item => item.nombre === producto.nombre);
@@ -98,80 +95,66 @@ function quitarDelCarrito(index) {
     }
 }
 
-// 📌 Calcular total
 function calcularTotal() {
     return carrito.reduce((acumulado, item) => acumulado + item.precio * item.cantidad, 0);
 }
 
-// 📌 Procesar compra
+// ✅ Mostrar formulario al dar clic en "comprar"
 function procesarCompra() {
     if (carrito.length === 0) {
         alert("🛒 Tu carrito está vacío.");
         return;
     }
 
-    let modalProceso = document.getElementById("modalProceso");
-    modalProceso.style.display = "flex";
-
-    setTimeout(() => {
-        modalProceso.style.display = "none";
-        carrito = [];
-        mostrarProductos();
-        actualizarCarrito();
-    }, 5000);
+    document.getElementById("modalFormulario").style.display = "flex";
 }
 
-// 📌 Validación del formulario
-document.getElementById("registroForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+// 📥 Validación del formulario
+document.getElementById("formularioCompra").addEventListener("submit", function(event) {
+    event.preventDefault();
 
     const nombre = document.getElementById("nombre").value.trim();
     const correo = document.getElementById("correo").value.trim();
     const password = document.getElementById("password").value;
-    const confirmar = document.getElementById("confirmarPassword").value;
+    const confirmacion = document.getElementById("confirmacion").value;
+    const mensajeError = document.getElementById("mensajeError");
 
-    document.getElementById("errorNombre").textContent = "";
-    document.getElementById("errorCorreo").textContent = "";
-    document.getElementById("errorPassword").textContent = "";
-    document.getElementById("errorConfirmacion").textContent = "";
-    document.getElementById("mensajeExito").textContent = "";
-
-    let valido = true;
-
-    if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
-        document.getElementById("errorNombre").textContent = "❌ Solo letras y espacios permitidos.";
-        valido = false;
+    if (!nombre) {
+        mensajeError.textContent = "❌ El nombre no puede estar vacío.";
+        return;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
-        document.getElementById("errorCorreo").textContent = "❌ Correo inválido.";
-        valido = false;
+    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regexCorreo.test(correo)) {
+        mensajeError.textContent = "❌ El correo no es válido.";
+        return;
     }
 
-    const regexPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
-    if (!regexPass.test(password)) {
-        document.getElementById("errorPassword").textContent = "❌ La contraseña debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un símbolo.";
-        valido = false;
+    if (password.length < 8) {
+        mensajeError.textContent = "❌ La contraseña debe tener al menos 8 caracteres.";
+        return;
     }
 
-    if (password !== confirmar) {
-        document.getElementById("errorConfirmacion").textContent = "❌ Las contraseñas no coinciden.";
-        valido = false;
+    if (password !== confirmacion) {
+        mensajeError.textContent = "❌ Las contraseñas no coinciden.";
+        return;
     }
 
-    if (valido) {
-        const loader = document.getElementById("loader");
-        loader.style.display = "flex";
+    mensajeError.textContent = "";
+    document.getElementById("modalFormulario").style.display = "none";
+    document.getElementById("modalProceso").style.display = "flex";
 
-        setTimeout(() => {
-            loader.style.display = "none";
-            document.getElementById("mensajeExito").textContent = "✅ Registro exitoso. ¡Bienvenido/a a la tienda!";
-            document.getElementById("registroForm").reset();
-        }, 5000);
-    }
+    setTimeout(() => {
+        document.getElementById("modalProceso").style.display = "none";
+        alert("✅ ¡Gracias por tu compra, " + nombre + "!");
+
+        carrito = [];
+        mostrarProductos();
+        actualizarCarrito();
+        document.getElementById("formularioCompra").reset();
+    }, 3000);
 });
 
-// 📌 Inicialización
 document.getElementById("procesarCompra").addEventListener("click", procesarCompra);
 mostrarProductos();
 actualizarCarrito();
