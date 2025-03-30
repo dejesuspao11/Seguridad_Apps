@@ -106,8 +106,40 @@ function procesarCompra() {
         return;
     }
 
+    mostrarResumenCarrito(); // ⬅️ esta línea es nueva
     document.getElementById("modalFormulario").style.display = "flex";
 }
+
+
+function mostrarResumenCarrito() {
+    const resumenDiv = document.getElementById("resumenCarrito");
+    if (!resumenDiv) return;
+
+    if (carrito.length === 0) {
+        resumenDiv.innerHTML = "<p>Tu carrito está vacío.</p>";
+        return;
+    }
+
+    let html = "<strong>Resumen de compra:</strong><ul>";
+    carrito.forEach(item => {
+        html += `<li>${item.nombre} x ${item.cantidad} = $${(item.precio * item.cantidad).toFixed(2)}</li>`;
+    });
+    html += "</ul>";
+
+    let total = calcularTotal();
+    let descuento = total > 100 ? total * 0.10 : 0;
+    let totalConDescuento = total - descuento;
+
+    html += `<p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+
+    if (descuento > 0) {
+        html += `<p style="color: green;">🎉 Descuento aplicado: -$${descuento.toFixed(2)}</p>
+                 <p><strong>Total con descuento: $${totalConDescuento.toFixed(2)}</strong></p>`;
+    }
+
+    resumenDiv.innerHTML = html;
+}
+
 
 // 📥 Validación del formulario
 document.getElementById("formularioCompra").addEventListener("submit", function(event) {
