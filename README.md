@@ -11,3 +11,4 @@
 - [Practica 7](https://dejesuspao11.github.io/Seguridad_Apps/practica-7/)
 - [Practica 8](https://dejesuspao11.github.io/Seguridad_Apps/practica-8/)
 - [Practica 9](https://dejesuspao11.github.io/Seguridad_Apps/practica-9/)
+- [Practica 10](https://dejesuspao11.github.io/Seguridad_Apps/practica-10/)
