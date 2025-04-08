@@ -1,4 +1,4 @@
-# Que son los microservicios?
+# ¿Que son los microservicios?
 
 Los **microservicios** son una arquitectura de software donde una aplicación se construye como un conjunto de pequeños servicios independientes que se comunican entre sí. Cada microservicio realiza una función especifica y es autónomo, lo que permite a los desarrolladores enfocarse en partes pequeñas y manejables del sistema.  
 Los microservicios pueden comunicarse con otros a través de **APIs**.  
@@ -6,7 +6,7 @@ Las plataformas como **Amazon Web Services (AWS)**, **Google Cloud** y **Microso
 En lugar de tener una única parte de código que haga todo, la aplicación se divide en varias partes pequeñas, cada una encargada de una tarea específica.  
 Cada microservicio puede trabajar de manera independiente, pero todos se comunican entre sí para que la aplicación funcione correctamente.
 
-## ¿Por qué es beneficioso?
+## ¿Por qué es beneficioso usarlos?
 
 ### Flexibilidad
 En una arquitectura de microservicios, si un servicio presenta algún problema o requiere una actualización, dicha modificación no impacta en el funcionamiento de los demás microservicios. Esto permite que la aplicación o sistema continúe operando de manera ininterrumpida, sin que se vean comprometidos otros procesos o funcionalidades.
@@ -45,7 +45,7 @@ Cada microservicio posee su propia superficie de ataque, lo que implica que cada
 ### Spotify (Plataforma de Streaming de Música)
 Spotify es una de las plataformas de streaming de música más grandes del mundo. Para gestionar la enorme cantidad de datos que maneja, como las preferencias de los usuarios, la reproducción de música, las listas de reproducción, etc., **Spotify utiliza microservicios**.
 
-#### ¿Cómo se usan los microservicios?:
+#### ¿Cómo se usan los microservicios en Spotify?:
 Spotify descompone su aplicación en múltiples microservicios que manejan funciones como la gestión de las canciones, las recomendaciones personalizadas, la creación de listas de reproducción, la gestión de cuentas de usuario, y la administración de anuncios.  
 Cada microservicio se encarga de una función específica y puede ser actualizado de manera independiente sin afectar el resto del sistema. Esto les permite desplegar nuevas características o arreglar errores rápidamente, sin que haya tiempos de inactividad significativos.  
 Spotify también usa microservicios para la escala dinámica. Por ejemplo, durante picos de tráfico, como el lanzamiento de nuevas funciones o eventos especiales, Spotify puede aumentar la capacidad de ciertos microservicios (como el de reproducción de música) sin afectar otros servicios.
@@ -53,7 +53,7 @@ Spotify también usa microservicios para la escala dinámica. Por ejemplo, duran
 ### Airbnb (Plataforma de Alquiler de Alojamiento)
 **Airbnb** es una plataforma global que permite a los usuarios alquilar propiedades o habitaciones en lugar de hospedarse en hoteles tradicionales. Debido a la enorme variedad de servicios que ofrece (alquileres, pagos, reservas, gestión de anfitriones, etc.), **Airbnb ha adoptado una arquitectura de microservicios** para manejar su infraestructura de manera eficiente.
 
-#### Usos de los microservicios:
+#### Usos de los microservicios en Airbnb:
 - **Gestión de listados**: Airbnb utiliza microservicios para gestionar los anuncios de propiedades, lo que incluye la creación de nuevos anuncios, la actualización de disponibilidad, precios y descripciones de las propiedades. Cada servicio puede manejar un aspecto específico del listado sin interferir con otros servicios.
 - **Reservas y disponibilidad**: Los microservicios se encargan de verificar la disponibilidad de las propiedades, gestionar las solicitudes de reserva, y calcular las tarifas dinámicas basadas en la demanda.
 - **Sistema de pagos**: Airbnb gestiona el pago a través de microservicios que interactúan con varias pasarelas de pago, como tarjetas de crédito, PayPal, etc. Además, estos microservicios también permiten gestionar las comisiones y los pagos entre anfitriones y la plataforma.
