@@ -1,21 +1,20 @@
 # Datos personales
 - Nombre: Paola de Jesus Rebollar Cruz
-- Edad: 24 años
-- Fotografía: ![mi_foto](mi_foto.jpeg)
+- Edad: 24 aÃ±os
+- FotografÃ­a: ![mi_foto](assets/mi_foto.jpeg)
 
-## Breve presentación
-Soy Paola, tengo 24 años, vivo en la Ciudad de México desde hace casi 6 años, me mudé para estudiar arte
-y estar más cerca de mi trabajo pero al poco tiempo decidí cambiar mi carrera a Ciberseguridad.
+## Breve presentaciÃ³n
+Soy Paola, tengo 24 aÃ±os, vivo en la Ciudad de MÃ©xico desde hace casi 6 aÃ±os, me mudÃ© para estudiar arte
+y estar mÃ¡s cerca de mi trabajo pero al poco tiempo decidÃ­ cambiar mi carrera a Ciberseguridad.
 
-
-## ¿Por qué elegí la carrera?
-Elegí estudiar Ciberseguridad porque mi experiencia trabajando en soporte técnico me permitió estar 
+## ï¿½Por quï¿½ elegï¿½ la carrera?
+Elegï¿½ estudiar Ciberseguridad porque mi experiencia trabajando en soporte tï¿½cnico me permitiï¿½ estar 
 en contacto con herramientas y situaciones que despertaron mi interes por esta carrera.
 
 ## Pasatiempos
-Disfruto mucho la música, me gusta escuchar distintos géneros. Me gusta la lectura, 
-también ver documentales (de temas varios), viajar cada que se pueda y salir a caminar.
+Disfruto mucho la mï¿½sica, me gusta escuchar distintos gï¿½neros. Me gusta la lectura, 
+tambiï¿½n ver documentales (de temas varios), viajar cada que se pueda y salir a caminar.
 
 ## Enlaces de contacto
-- [Correo electrónico](cdmx2976@amerike.edu.mx)
+- [Correo electrï¿½nico](cdmx2976@amerike.edu.mx)
 - [LinkedIn](https://www.linkedin.com/in/paola-de-jesus-rebollar-367901197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
