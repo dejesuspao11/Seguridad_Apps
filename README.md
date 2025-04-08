@@ -1,5 +1,5 @@
 # [Paola de Jesus]
-<img src="mi_foto.jpeg" alt="mi_foto" width="200"/>
+<img src="assets/mi_foto.jpeg" alt="mi_foto" width="200"/>
 
 ## Enlaces
 - [Practica 1](https://docs.google.com/presentation/d/1k4HpHSg7DPSYwqzzrr_LrW9L2iHRPMqwArLM6HnCFN0/edit?usp=sharing)
