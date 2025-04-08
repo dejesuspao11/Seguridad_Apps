@@ -1,68 +1,68 @@
-# ¿Qué son los microservicios?
+# Que son los microservicios?
 
-Los **microservicios** son una arquitectura de software donde una aplicación se construye como un conjunto de pequeños servicios independientes que se comunican entre sí. Cada microservicio realiza una función específica y es autónomo, lo que permite a los desarrolladores enfocarse en partes pequeñas y manejables del sistema.  
-Los microservicios pueden comunicarse con otros a través de **APIs**.  
-Las plataformas como **Amazon Web Services (AWS)**, **Google Cloud** y **Microsoft Azure** son ideales para la implementación de microservicios debido a su capacidad de escalar recursos fácilmente.  
-En lugar de tener una única parte de código que haga todo, la aplicación se divide en varias partes pequeñas, cada una encargada de una tarea específica.  
-Cada microservicio puede trabajar de manera independiente, pero todos se comunican entre sí para que la aplicación funcione correctamente.
+Los **microservicios** son una arquitectura de software donde una aplicaciÃ³n se construye como un conjunto de pequeÃ±os servicios independientes que se comunican entre sÃ­. Cada microservicio realiza una funciÃ³n especifica y es autÃ³nomo, lo que permite a los desarrolladores enfocarse en partes pequeÃ±as y manejables del sistema.  
+Los microservicios pueden comunicarse con otros a travÃ©s de **APIs**.  
+Las plataformas como **Amazon Web Services (AWS)**, **Google Cloud** y **Microsoft Azure** son ideales para la implementaciÃ³n de microservicios debido a su capacidad de escalar recursos fÃ¡cilmente.  
+En lugar de tener una Ãºnica parte de cÃ³digo que haga todo, la aplicaciÃ³n se divide en varias partes pequeÃ±as, cada una encargada de una tarea especÃ­fica.  
+Cada microservicio puede trabajar de manera independiente, pero todos se comunican entre sÃ­ para que la aplicaciÃ³n funcione correctamente.
 
-## ¿Por qué es beneficioso?
+## ï¿½Por quï¿½ es beneficioso?
 
 ### Flexibilidad
-En una arquitectura de microservicios, si un servicio presenta algún problema o requiere una actualización, dicha modificación no impacta en el funcionamiento de los demás microservicios. Esto permite que la aplicación o sistema continúe operando de manera ininterrumpida, sin que se vean comprometidos otros procesos o funcionalidades.
+En una arquitectura de microservicios, si un servicio presenta algÃºn problema o requiere una actualizaciÃ³n, dicha modificaciÃ³n no impacta en el funcionamiento de los demÃ¡s microservicios. Esto permite que la aplicaciÃ³n o sistema continÃºe operando de manera ininterrumpida, sin que se vean comprometidos otros procesos o funcionalidades.
 
 ### Escalabilidad
-En situaciones en las que se necesite aumentar la capacidad de un área específica del sistema, es posible agregar nuevos microservicios sin necesidad de modificar toda la estructura. Esta característica facilita la adaptación a un mayor volumen de usuarios o datos sin interrumpir el funcionamiento global de la plataforma.
+En situaciones en las que se necesite aumentar la capacidad de un Ã¡rea especÃ­fica del sistema, es posible agregar nuevos microservicios sin necesidad de modificar toda la estructura. Esta caracterÃ­stica facilita la adaptaciÃ³n a un mayor volumen de usuarios o datos sin interrumpir el funcionamiento global de la plataforma.
 
-### Flexibilidad tecnológica
-Cada microservicio puede ser desarrollado utilizando distintas tecnologías y lenguajes de programación, adaptándose a las necesidades particulares de cada tarea que debe realizar. Esta autonomía tecnológica permite optimizar el rendimiento de cada componente de manera independiente.
+### Flexibilidad tecnolï¿½gica
+Cada microservicio puede ser desarrollado utilizando distintas tecnologÃ­as y lenguajes de programaciÃ³n, adaptÃ¡ndose a las necesidades particulares de cada tarea que debe realizar. Esta autonoma tecnolÃ³gica permite optimizar el rendimiento de cada componente de manera independiente.
 
 ### Resiliencia
 La arquitectura de microservicios favorece la resiliencia del sistema, ya que si un microservicio experimenta fallos, no necesariamente se ve afectado el funcionamiento de otros servicios. Esta independencia y desacoplamiento de los microservicios contribuyen a minimizar el impacto de los errores en la estabilidad del sistema en su conjunto.
 
-## Posibles Desafíos
+## Posibles Desafï¿½os
 
 ### Complejidad
-La gestión de múltiples microservicios puede resultar compleja, especialmente en lo que respecta a la comunicación entre los diferentes servicios y al monitoreo de su rendimiento. El manejo adecuado de esta arquitectura exige un nivel elevado de coordinación y una infraestructura que permita gestionar eficientemente los diversos componentes interconectados.
+La gestiï¿½n de mï¿½ltiples microservicios puede resultar compleja, especialmente en lo que respecta a la comunicaciï¿½n entre los diferentes servicios y al monitoreo de su rendimiento. El manejo adecuado de esta arquitectura exige un nivel elevado de coordinaciï¿½n y una infraestructura que permita gestionar eficientemente los diversos componentes interconectados.
 
-### Coordinación
-La implementación de microservicios requiere un enfoque riguroso para la gestión de las **APIs**, así como para la sincronización y la interacción entre los distintos servicios. A medida que el número de microservicios crece, la complejidad de mantener una integración coherente y sin errores también aumenta, lo que exige una planificación detallada.
+### Coordinaciï¿½n
+La implementaciï¿½n de microservicios requiere un enfoque riguroso para la gestiï¿½n de las **APIs**, asï¿½ como para la sincronizaciï¿½n y la interacciï¿½n entre los distintos servicios. A medida que el nï¿½mero de microservicios crece, la complejidad de mantener una integraciï¿½n coherente y sin errores tambiï¿½n aumenta, lo que exige una planificaciï¿½n detallada.
 
 ### Despliegue y Mantenimiento
-El despliegue y mantenimiento de una infraestructura basada en microservicios puede ser más desafiante que en una arquitectura monolítica. La necesidad de gestionar varios servicios independientes conlleva una mayor complejidad en cuanto a la actualización, monitoreo y resolución de problemas, lo que puede aumentar los costos operativos.
+El despliegue y mantenimiento de una infraestructura basada en microservicios puede ser mï¿½s desafiante que en una arquitectura monolï¿½tica. La necesidad de gestionar varios servicios independientes conlleva una mayor complejidad en cuanto a la actualizaciï¿½n, monitoreo y resoluciï¿½n de problemas, lo que puede aumentar los costos operativos.
 
 ### Seguridad
-Cada microservicio posee su propia superficie de ataque, lo que implica que cada componente debe ser protegido de manera individual. Esto requiere la implementación de un enfoque de seguridad integral que garantice la protección de todas las interacciones y datos en cada uno de los servicios, así como la gestión adecuada de las vulnerabilidades potenciales.
+Cada microservicio posee su propia superficie de ataque, lo que implica que cada componente debe ser protegido de manera individual. Esto requiere la implementaciï¿½n de un enfoque de seguridad integral que garantice la protecciï¿½n de todas las interacciones y datos en cada uno de los servicios, asï¿½ como la gestiï¿½n adecuada de las vulnerabilidades potenciales.
 
 ## Patrones Comunes de Microservicios
 
 - **API Gateway**: Un punto central donde se gestionan todas las peticiones y se distribuyen a los microservicios correspondientes.
-- **Event-Driven Architecture (EDA)**: Los microservicios pueden comunicarse entre sí a través de eventos, lo que puede facilitar la sincronización y la escalabilidad.
-- **Service Discovery**: Un sistema donde los microservicios pueden encontrar y comunicarse con otros servicios de forma dinámica, sin necesidad de configuraciones manuales.
+- **Event-Driven Architecture (EDA)**: Los microservicios pueden comunicarse entre sï¿½ a travï¿½s de eventos, lo que puede facilitar la sincronizaciï¿½n y la escalabilidad.
+- **Service Discovery**: Un sistema donde los microservicios pueden encontrar y comunicarse con otros servicios de forma dinï¿½mica, sin necesidad de configuraciones manuales.
 
 ## Ejemplos:
 
-### Spotify (Plataforma de Streaming de Música)
-Spotify es una de las plataformas de streaming de música más grandes del mundo. Para gestionar la enorme cantidad de datos que maneja, como las preferencias de los usuarios, la reproducción de música, las listas de reproducción, etc., **Spotify utiliza microservicios**.
+### Spotify (Plataforma de Streaming de Mï¿½sica)
+Spotify es una de las plataformas de streaming de mï¿½sica mï¿½s grandes del mundo. Para gestionar la enorme cantidad de datos que maneja, como las preferencias de los usuarios, la reproducciï¿½n de mï¿½sica, las listas de reproducciï¿½n, etc., **Spotify utiliza microservicios**.
 
-#### Cómo usan los microservicios:
-Spotify descompone su aplicación en múltiples microservicios que manejan funciones como la gestión de las canciones, las recomendaciones personalizadas, la creación de listas de reproducción, la gestión de cuentas de usuario, y la administración de anuncios.  
-Cada microservicio se encarga de una función específica y puede ser actualizado de manera independiente sin afectar el resto del sistema. Esto les permite desplegar nuevas características o arreglar errores rápidamente, sin que haya tiempos de inactividad significativos.  
-Spotify también usa microservicios para la escala dinámica. Por ejemplo, durante picos de tráfico, como el lanzamiento de nuevas funciones o eventos especiales, Spotify puede aumentar la capacidad de ciertos microservicios (como el de reproducción de música) sin afectar otros servicios.
+#### Cï¿½mo usan los microservicios:
+Spotify descompone su aplicaciï¿½n en mï¿½ltiples microservicios que manejan funciones como la gestiï¿½n de las canciones, las recomendaciones personalizadas, la creaciï¿½n de listas de reproducciï¿½n, la gestiï¿½n de cuentas de usuario, y la administraciï¿½n de anuncios.  
+Cada microservicio se encarga de una funciï¿½n especï¿½fica y puede ser actualizado de manera independiente sin afectar el resto del sistema. Esto les permite desplegar nuevas caracterï¿½sticas o arreglar errores rï¿½pidamente, sin que haya tiempos de inactividad significativos.  
+Spotify tambiï¿½n usa microservicios para la escala dinï¿½mica. Por ejemplo, durante picos de trï¿½fico, como el lanzamiento de nuevas funciones o eventos especiales, Spotify puede aumentar la capacidad de ciertos microservicios (como el de reproducciï¿½n de mï¿½sica) sin afectar otros servicios.
 
 ### Airbnb (Plataforma de Alquiler de Alojamiento)
-**Airbnb** es una plataforma global que permite a los usuarios alquilar propiedades o habitaciones en lugar de hospedarse en hoteles tradicionales. Debido a la enorme variedad de servicios que ofrece (alquileres, pagos, reseñas, gestión de anfitriones, etc.), **Airbnb ha adoptado una arquitectura de microservicios** para manejar su infraestructura de manera eficiente.
+**Airbnb** es una plataforma global que permite a los usuarios alquilar propiedades o habitaciones en lugar de hospedarse en hoteles tradicionales. Debido a la enorme variedad de servicios que ofrece (alquileres, pagos, reseï¿½as, gestiï¿½n de anfitriones, etc.), **Airbnb ha adoptado una arquitectura de microservicios** para manejar su infraestructura de manera eficiente.
 
-#### Cómo usan los microservicios:
-- **Gestión de listados**: Airbnb utiliza microservicios para gestionar los anuncios de propiedades, lo que incluye la creación de nuevos anuncios, la actualización de disponibilidad, precios y descripciones de las propiedades. Cada servicio puede manejar un aspecto específico del listado sin interferir con otros servicios.
-- **Reservas y disponibilidad**: Los microservicios se encargan de verificar la disponibilidad de las propiedades, gestionar las solicitudes de reserva, y calcular las tarifas dinámicas basadas en la demanda.
-- **Sistema de pagos**: Airbnb gestiona el pago a través de microservicios que interactúan con varias pasarelas de pago, como tarjetas de crédito, PayPal, etc. Además, estos microservicios también permiten gestionar las comisiones y los pagos entre anfitriones y la plataforma.
-- **Reseñas y calificaciones**: Un microservicio dedicado maneja las reseñas de los usuarios, tanto las que dejan los huéspedes como las que dejan los anfitriones. Este servicio se encarga de almacenar las calificaciones y comentarios, y de calcular el puntaje de los anfitriones.
-- **Gestión de usuarios y autenticación**: Los microservicios también están involucrados en la autenticación de los usuarios, gestionando el inicio de sesión, la creación de perfiles, las configuraciones de privacidad, y las interacciones de los usuarios con la plataforma.
+#### Cï¿½mo usan los microservicios:
+- **Gestiï¿½n de listados**: Airbnb utiliza microservicios para gestionar los anuncios de propiedades, lo que incluye la creaciï¿½n de nuevos anuncios, la actualizaciï¿½n de disponibilidad, precios y descripciones de las propiedades. Cada servicio puede manejar un aspecto especï¿½fico del listado sin interferir con otros servicios.
+- **Reservas y disponibilidad**: Los microservicios se encargan de verificar la disponibilidad de las propiedades, gestionar las solicitudes de reserva, y calcular las tarifas dinï¿½micas basadas en la demanda.
+- **Sistema de pagos**: Airbnb gestiona el pago a travï¿½s de microservicios que interactï¿½an con varias pasarelas de pago, como tarjetas de crï¿½dito, PayPal, etc. Ademï¿½s, estos microservicios tambiï¿½n permiten gestionar las comisiones y los pagos entre anfitriones y la plataforma.
+- **Reseï¿½as y calificaciones**: Un microservicio dedicado maneja las reseï¿½as de los usuarios, tanto las que dejan los huï¿½spedes como las que dejan los anfitriones. Este servicio se encarga de almacenar las calificaciones y comentarios, y de calcular el puntaje de los anfitriones.
+- **Gestiï¿½n de usuarios y autenticaciï¿½n**: Los microservicios tambiï¿½n estï¿½n involucrados en la autenticaciï¿½n de los usuarios, gestionando el inicio de sesiï¿½n, la creaciï¿½n de perfiles, las configuraciones de privacidad, y las interacciones de los usuarios con la plataforma.
 
 ## Referencias
 
-- [¿Qué son los microservicios? Ventajas de la arquitectura de microservicios](https://www.redhat.com/es/topics/microservices/what-are-microservices)
+- [ï¿½Quï¿½ son los microservicios? Ventajas de la arquitectura de microservicios](https://www.redhat.com/es/topics/microservices/what-are-microservices)
 - [IBM. (2025, 13 febrero). Microservices. Think](https://www.ibm.com/think/topics/microservices)
 - [Design Gurus. (s. f.). Discuss Spotify system architecture](https://www.designgurus.io/answers/detail/discuss-spotify-system-architecture)
 - [Microservice Architecture pattern](https://microservices.io/patterns/microservices.html)
