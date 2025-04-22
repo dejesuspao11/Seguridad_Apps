@@ -52,8 +52,7 @@ Este modelo representa el diseño lógico de una base de datos para una aplicaci
 
 ## 🖼️ Diagrama Entidad–Relación
 
-![Diagrama ER](diagrama.png)
-<img src="assets/diagrama.png" alt="diagrama" width="200"/>
+ <img src="assets/diagrama.png" alt="diagrama" width="200"/>
 
 > *Nota: Este diagrama representa las relaciones descritas anteriormente. Incluye claves primarias, claves foráneas y cardinalidades correspondientes.*
 
