@@ -40,13 +40,13 @@ Este modelo representa el diseño lógico de una base de datos para una aplicaci
 
 ## 🔗 Relaciones
 
-| Entidad A                  | Relación     | Entidad B         | Cardinalidad     |
-|----------------------------|--------------|--------------------|------------------|
-| Users ↔ Assets             | Uno a Muchos | Un usuario puede tener varios activos |
-| Assets ↔ Vendor            | Muchos a Uno | Cada activo proviene de un proveedor |
-| Assets ↔ AssetType         | Muchos a Uno | Cada activo tiene un tipo definido |
-| Assets ↔ AssetAssignmentHistory | Uno a Muchos | Un activo puede tener múltiples asignaciones históricas |
-| Users ↔ AssetAssignmentHistory | Uno a Muchos | Un usuario puede aparecer en varias asignaciones |
+| Entidad A                  | Relación              | Entidad B                    | Cardinalidad     |
+|----------------------------|------------------------|-------------------------------|------------------|
+| Users ↔ Assets             | Uno a Muchos           | Un usuario puede tener varios activos              | 1 a N            |
+| Assets ↔ Vendor            | Muchos a Uno           | Cada activo proviene de un proveedor               | N a 1            |
+| Assets ↔ AssetType         | Muchos a Uno           | Cada activo tiene un tipo definido                 | N a 1            |
+| Assets ↔ AssetAssignmentHistory | Uno a Muchos   | Un activo puede tener múltiples asignaciones históricas | 1 a N       |
+| Users ↔ AssetAssignmentHistory | Uno a Muchos   | Un usuario puede aparecer en varias asignaciones   | 1 a N            |
 
 ---
 
