@@ -58,11 +58,36 @@ Este modelo representa el diseño lógico de una base de datos para una aplicaci
 
 ---
 
-## ✅ Consideraciones Finales
+## 📋 Reglas de Negocio
 
-- El sistema tiene únicamente **tres proveedores válidos**:
-  - Company Owned
-  - KC Rentas
-  - New Era
-- Se utiliza `serial_number` como **clave primaria** para identificar activos de forma única.
-- El historial de asignaciones permite realizar auditorías y seguimiento detallado.
+A continuación se presentan las reglas de negocio que definen el comportamiento esperado de los datos dentro del sistema de inventario:
+
+1. **Asignación única de activos**  
+   - Cada activo (laptop o monitor) puede estar asignado únicamente a un usuario a la vez.
+
+2. **Estados de activos**  
+   - Un activo debe tener uno de los siguientes estados: `'free'` (disponible) o `'assigned'` (asignado a un usuario).
+   - Si un activo tiene estado `'free'`, no debe estar vinculado a ningún usuario (`user_id` debe ser `NULL`).
+
+3. **Proveedores válidos**  
+   - Todos los activos deben pertenecer a uno de los siguientes proveedores:
+     - **Company Owned**
+     - **KC Rentas**
+     - **New Era**
+   - No se permite registrar activos con proveedores fuera de esta lista.
+
+4. **Unicidad del número de serie**  
+   - El campo `serial_number` debe ser único para cada activo. No puede haber dos activos con el mismo número de serie.
+
+5. **Historial de asignaciones**  
+   - Cada vez que un activo se asigna o devuelve, debe registrarse un nuevo evento en la tabla `AssetAssignmentHistory` con las fechas correspondientes (`assigned_date` y `returned_date`).
+
+6. **Tipos de activos predefinidos**  
+   - Todos los activos deben clasificarse como uno de los tipos definidos en la tabla `AssetType`, como por ejemplo:
+     - **Laptop**
+     - **Monitor**
+   - No se permiten tipos personalizados fuera del catálogo existente.
+
+7. **Integridad referencial obligatoria**  
+   - No se puede asignar un activo a un usuario que no exista en el sistema.
+   - No se puede registrar un activo sin un proveedor válido ni un tipo de activo válido.
