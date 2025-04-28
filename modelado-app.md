@@ -16,7 +16,7 @@ Este modelo representa el diseño lógico de una base de datos para una aplicaci
 - `serial_number` (PK): Número de serie único del activo
 - `make`: Marca del activo (ej. Dell, HP)
 - `model`: Modelo del activo
-- `status`: Estado actual (`'free'` o `'assigned'`)
+- `status` (ENUM): Estado actual del activo (`'free'` o `'assigned'`)
 - `user_id` (FK): Referencia al usuario asignado (nullable)
 - `vendor_id` (FK): Referencia al proveedor (Company Owned, KC Rentas, New Era)
 - `asset_type_id` (FK): Tipo de activo (Laptop, Monitor)
@@ -65,8 +65,8 @@ A continuación se presentan las reglas de negocio que definen el comportamiento
 1. **Asignación única de activos**  
    - Cada activo (laptop o monitor) puede estar asignado únicamente a un usuario a la vez.
 
-2. **Estados de activos**  
-   - Un activo debe tener uno de los siguientes estados: `'free'` (disponible) o `'assigned'` (asignado a un usuario).
+2. **Estados de activos**    
+   - El estado del activo es un valor controlado mediante ENUM: `'free'` (disponible) o `'assigned'` (asignado a un usuario).
    - Si un activo tiene estado `'free'`, no debe estar vinculado a ningún usuario (`user_id` debe ser `NULL`).
 
 3. **Proveedores válidos**  
@@ -91,3 +91,14 @@ A continuación se presentan las reglas de negocio que definen el comportamiento
 7. **Integridad referencial obligatoria**  
    - No se puede asignar un activo a un usuario que no exista en el sistema.
    - No se puede registrar un activo sin un proveedor válido ni un tipo de activo válido.
+
+---
+
+## 🖼️ Captura del Diagrama de Base de Datos
+
+<p align="center">
+  <img src="assets/diagrama-supabase.png" alt="Diagrama ER Supabase" width="100%"/>
+</p>
+
+> *La imagen muestra el diagrama de entidad–relación generado automáticamente en Supabase, reflejando las relaciones entre las tablas y las claves primarias/foráneas.*
+
