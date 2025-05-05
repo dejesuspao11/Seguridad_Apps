@@ -94,7 +94,7 @@ A continuación se presentan las reglas de negocio que definen el comportamiento
 
 ---
 
-## 🖼️ Captura del Diagrama de Base de Datos
+## 🖼️ Modelado de Datos (Supabase)
 
 <p align="center">
   <img src="assets/diagrama-supabase.png" alt="Diagrama ER Supabase" width="100%"/>
